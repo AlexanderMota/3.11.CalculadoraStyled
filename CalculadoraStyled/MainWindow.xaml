@@ -10,17 +10,28 @@
         MinHeight="350" MinWidth="200">
 
     <Window.Resources>
-        <Style TargetType="{x:Type Border}" x:Key="StyleBor">
+        <Style TargetType="{x:Type Border}" x:Key="bor">
             <Setter Property="Grid.RowSpan" Value="2"/>
             <Setter Property="Grid.ColumnSpan" Value="3"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Margin" Value="10"/>
             <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Background" Value="#ffffff"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect
+                        BlurRadius="20" 
+                        Direction="315" 
+                        RenderingBias="Performance" 
+                        ShadowDepth="1"/>
+                </Setter.Value>
+            </Setter>
         </Style>
         <Style TargetType="{x:Type TextBlock}" x:Key="StyleTB">
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        <Style TargetType="{x:Type Button}" x:Key="StyleButt">
+        <Style TargetType="{x:Type Button}">
             <EventSetter Event="Click" Handler="Button_Click"/>
             <Setter Property="Margin" Value="5"/>
         </Style>
@@ -41,14 +52,14 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border Style="{StaticResource StyleBor}">
+        <Border Style="{StaticResource bor}">
             <Viewbox>
                 <TextBlock Style="{StaticResource StyleTB}"
                     x:Name="VistaTexto"/>
             </Viewbox>
         </Border>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="1"
             Grid.Row="2"
             Grid.Column="0">
@@ -57,7 +68,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="2"
             Grid.Row="2"
             Grid.Column="1">
@@ -66,7 +77,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="3"
             Grid.Row="2"
             Grid.Column="2">
@@ -75,7 +86,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="4"
             Grid.Row="3"
             Grid.Column="0">
@@ -84,7 +95,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="5"
             Grid.Row="3"
             Grid.Column="1">
@@ -93,7 +104,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="6"
             Grid.Row="3"
             Grid.Column="2">
@@ -102,7 +113,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="7"
             Grid.Row="4"
             Grid.Column="0">
@@ -111,7 +122,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="8"
             Grid.Row="4"
             Grid.Column="1">
@@ -120,7 +131,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="9"
             Grid.Row="4"
             Grid.Column="2">
@@ -129,7 +140,7 @@
             </Viewbox>
         </Button>
 
-        <Button Style="{StaticResource StyleButt}"
+        <Button
             Tag="0"
             Grid.Row="5"
             Grid.ColumnSpan="3">
